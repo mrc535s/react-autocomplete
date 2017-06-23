@@ -1,0 +1,35 @@
+{
+  "name": "react-autocomplete",
+  "version": "0.0.1",
+  "description": "react autocomplete search",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server"
+  },
+  "repository": "git+https://github.com/mrc535s/react-autocomplete.git",
+  "keywords": [
+    "reactjs",
+    "autocomplete",
+    "search"
+  ],
+  "author": "Michael Carney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrc535s/react-autocomplete/issues"
+  },
+  "homepage": "https://github.com/mrc535s/react-autocomplete#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
