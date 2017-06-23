@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {AutoComplete} from './components/auto-complete'
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <AutoComplete/>,
   document.getElementById('root')
 );
