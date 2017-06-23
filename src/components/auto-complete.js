@@ -42,6 +42,7 @@ export class AutoCompleteInput extends React.Component {
 export class AutoCompleteListItem extends React.Component {
 	constructor(props) {
 		super(props);
+		this.onClick = this.onClick.bind(this);
 		this.onMouseOut = this.onMouseOut.bind(this);
 		this.onMouseOver = this.onMouseOver.bind(this);
 		this.getBackground = this.getBackground.bind(this);
@@ -60,6 +61,10 @@ export class AutoCompleteListItem extends React.Component {
   onMouseOut () {
     this.setState({ hovered:false });
   }
+
+	onClick() {
+		this.props.handleItemSelect(this.props.item.name);
+	}
 	render () {
 		const item = typeof this.props.item.name === "string" ? this.props.item : this.props.item;
 		const listStyles = {
@@ -68,7 +73,8 @@ export class AutoCompleteListItem extends React.Component {
 			padding: "5px"
 		}
 		return (
-			<li style={listStyles} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>{item.name}</li>
+			<li style={listStyles} onMouseOver={this.onMouseOver} 
+				onMouseOut={this.onMouseOut} onClick={this.onClick}>{item.name}</li>
 		);
 	}
 }
@@ -90,7 +96,7 @@ export class AutoCompleteList extends React.Component {
 		};
 		const listStyle = this.props.items ? styles : {};
 		const listItems = this.props.items ? this.props.items.map((item) => 
-			<AutoCompleteListItem key={item.key} item={item}/>
+			<AutoCompleteListItem key={item.key} item={item} handleItemSelect={this.props.handleItemSelect}/>
 		) : '';
 		return (
 			<ul style={listStyle}>
@@ -104,8 +110,9 @@ export class AutoComplete extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleTextChange = this.handleTextChange.bind(this);
+		this.handleItemSelect = this.handleItemSelect.bind(this);
 		this.filterItems = this.filterItems.bind(this);
-		this.state = {items: ITEMS_TO_GET, text: ''}
+		this.state = {items: ITEMS_TO_GET, text: '', selectedItem: ''}
 	}
 	filterItems(items, filter) {
 		if (filter) {
@@ -119,8 +126,15 @@ export class AutoComplete extends React.Component {
 	handleTextChange(text) {
 		this.setState((prevState, props)=> {
 			return {
-				items: prevState.items,
 				text: text
+			}
+		})
+	}
+	handleItemSelect(itemName) {
+		this.setState(function(prevState, props) {
+			return {
+				selectedItem: itemName,
+				text: ''
 			}
 		})
 	}
@@ -128,8 +142,10 @@ export class AutoComplete extends React.Component {
 		const items = this.filterItems(this.state.items, this.state.text);
 		return (
 			<div>
-			<AutoCompleteInput onTextChange = {this.handleTextChange} inputText={this.state.text}/>
-			<AutoCompleteList items = {items}/>
+				<AutoCompleteInput onTextChange = {this.handleTextChange} inputText={this.state.text}/>
+				<AutoCompleteList items = {items} handleItemSelect = {this.handleItemSelect}/>
+				<h1>{this.state.selectedItem}</h1>
+
 			</div>
 		);
 	}
