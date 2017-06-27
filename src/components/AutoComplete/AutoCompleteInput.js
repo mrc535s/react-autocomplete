@@ -8,12 +8,13 @@ export default class AutoCompleteInput extends React.Component {
 	handleChange(e) {
 		this.props.onTextChange(e.target.value);
 	}
+	
 	render() {
 		const textStyle = {
 			width: '150px'
 		}
 		return (
-		<input type='text' style={textStyle} placeholder='Search' value={this.props.inputText} onChange={this.handleChange} />
+		<input autoFocus type='text' style={textStyle} placeholder='Search' value={this.props.inputText} onChange={this.handleChange} />
 		);
 	}
 }

@@ -11,15 +11,17 @@ export default class AutoCompleteListItem extends React.Component {
 		}
 	}
 	getBackground() {
-		if (this.state.hovered) {
+		if (this.props.hoveredItem.key === this.props.item.key) {
 			return "#d3d3d3"
 		}
 	}
 	onMouseOver () {
-    this.setState({ hovered:true });
+    //this.setState({ hovered:true });
+		this.props.handleItemMouseHover(this.props.item);
   }
   onMouseOut () {
-    this.setState({ hovered:false });
+    //this.setState({ hovered:false });
+		this.props.handleItemMouseHover(null);
   }
 
 	onClick() {
