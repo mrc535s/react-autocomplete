@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default class AutoCompleteListItem extends React.Component {
 	constructor(props) {
 		super(props);

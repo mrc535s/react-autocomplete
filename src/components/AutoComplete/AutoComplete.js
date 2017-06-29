@@ -2,45 +2,13 @@ import React from 'react';
 import AutoCompleteInput from './AutoCompleteInput';
 import AutoCompleteList from './AutoCompleteList';
 
-const ITEMS_TO_GET = [{
-		name: 'Praveen',
-		key: '1234'
-	}, {
-		name: 'Mike',
-		key: '4453'
-	}, {
-		name: 'John',
-		key: '4454'
-	}, {
-		name: 'Sapnna',
-		key: '4456'
-	}, {
-		name: 'Srikanth',
-		key: '4450'
-	}, {
-		name: 'Chetan',
-		key: '44512'
-	}, {
-		name: 'Sherry',
-		key: '445885'
-	}, {
-		name: 'Stiller',
-		key: '1234'
-	}, {
-		name: 'Someone',
-		key: '2354'
-	}, {
-		name: 'Silly Guy',
-		key: '4815'
-	}];
-
 const DOWN_TEXT = 'down';
 const UP_TEXT = 'up';
 const DOWN = 40;
 const UP = 38;
 const ENTER = 13;
 
-export class AutoComplete extends React.Component {
+export default class AutoComplete extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleTextChange = this.handleTextChange.bind(this);
@@ -48,7 +16,7 @@ export class AutoComplete extends React.Component {
 		this.handleItemMouseHover = this.handleItemMouseHover.bind(this);
 		this.onKeyDown = this.onKeyDown.bind(this);
 		this.filterItems = this.filterItems.bind(this);
-		this.state = {items: ITEMS_TO_GET, text: '', selectedItem: '', hoveredItem: {}, filteredItems: {}}
+		this.state = {items: this.props.items, text: '', selectedItem: '', hoveredItem: {}, filteredItems: {}}
 	}
 	filterItems(items, filter) {
 		if (filter && !this.state.selectedItem) {
@@ -132,8 +100,6 @@ export class AutoComplete extends React.Component {
 				<AutoCompleteInput onTextChange = {this.handleTextChange} inputText={this.state.text}/>
 				<AutoCompleteList items = {this.state.filteredItems} handleItemSelect = {this.handleItemSelect} 
 					handleItemMouseHover={this.handleItemMouseHover} hoveredItem={this.state.hoveredItem}/>
-				<h1>{this.state.selectedItem}</h1>
-
 			</div>
 		);
 	}
