@@ -4,8 +4,9 @@
   "description": "react autocomplete search",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --watch",
-    "start": "webpack-dev-server"
+    "test": "jest --coverage",
+    "start": "webpack-dev-server",
+    "watch": "jest --coverage --watch"
   },
   "repository": "git+https://github.com/mrc535s/react-autocomplete.git",
   "keywords": [
