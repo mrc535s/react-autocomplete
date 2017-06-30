@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import AutoComplete from '../src/components/AutoComplete/Autocomplete.js';
 
-describe('Welcome (Snapshot)', () => {
+describe('Auto Complete', () => {
 	let component;
 	let wrapper;
 	const items = [{
