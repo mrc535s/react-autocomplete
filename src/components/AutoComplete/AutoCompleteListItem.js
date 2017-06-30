@@ -12,8 +12,9 @@ export default class AutoCompleteListItem extends React.Component {
 		}
 	}
 	getBackground() {
+		const HOVER_BACKGROUND_COLOR = "#d3d3d3";
 		if (this.props.hoveredItem.key === this.props.item.key) {
-			return "#d3d3d3"
+			return HOVER_BACKGROUND_COLOR;
 		}
 	}
 	onMouseOver () {
@@ -29,7 +30,7 @@ export default class AutoCompleteListItem extends React.Component {
 		this.props.handleItemSelect(this.props.item.name);
 	}
 	render () {
-		const item = typeof this.props.item.name === "string" ? this.props.item : this.props.item;
+		const item = typeof this.props.item.name === "string" ? this.props.item : this.props.item.toString();
 		const listStyles = {
 			backgroundColor: this.getBackground(),
 			cursor: "pointer",

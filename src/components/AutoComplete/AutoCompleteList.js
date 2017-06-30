@@ -15,8 +15,9 @@ export default class AutoCompleteList extends React.Component {
 			height: 'auto',
 			listStyle: 'none'
 		};
-		const listStyle = this.props.items.length > 0 ? styles : {};
-		const listItems = this.props.items.length > 0 ? this.props.items.map((item) => 
+		const itemsExist = this.props.items && this.props.items.length;
+		const listStyle = itemsExist > 0 ? styles : {};
+		const listItems = itemsExist > 0 ? this.props.items.map((item) => 
 			<AutoCompleteListItem key={item.key} item={item} hoveredItem = {this.props.hoveredItem} handleItemSelect={this.props.handleItemSelect} 
 				handleItemMouseHover = {this.props.handleItemMouseHover}/>
 		) : '';
