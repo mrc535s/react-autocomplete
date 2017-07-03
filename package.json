@@ -1,6 +1,6 @@
 {
   "name": "nitro-react-autocomplete",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nitro React Autocomplete Search",
   "main": "dist/index.js",
   "scripts": {
