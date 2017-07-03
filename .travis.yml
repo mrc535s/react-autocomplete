@@ -1,3 +1,14 @@
 language: node_js
 node_js:
   - "6"
+before_deploy: "yarn run build"
+deploy: 
+  provider: npm
+  email: carney535@yahoo.com
+  api_key:  
+    secure: "nUSdGs8DSpT4G4cwhu3zY8G4imNJzv2fTbzVocvoMBVIA7b083W+NwLQ1FFTiD1383cRHo241Ir/kjq+qDaULe5q6xCMzXvsFB763dhzWKATtUNMIspjGjQXADGC7
+FIXK+OXqG3mvkNZ9Dsv7phHksMA6JFmD4MWGi62j1BZfGciyoOz9dr5pCtviBamRamy0lcK7OkIZBYGfXXtnBVhyhpt1ndpKLlx6qJw2K1fW12Q/IvqimGnVqLTjkfS5srBSPSIC
+WmNUqafb74xT/9yPcNZbkC5EPOm6dYopmnt0UhS7PCd6ozIN6vwExY1Izyv7MeU4caNFLxyECiX8Q8eTtvY56AOoUsE5hOUIMh0S7vEv7XukUuvUsnCEmGm153N/5N5qOZ9Jzf/B
+sh/KTMBX7JUeQwa/+q9y0LQUMfZiFbaFjAmVFbQxvAlLOUZteW462EwksV4zIOs/a5B3fCEeBc37Y06Z2IyaP6Js0ZdeHtBHJtqrS5qk5M0iZ6i7eF/8PhrEjzGClYeqezg1liai
+M/RfpOXIVgqjxM9HTYRKdosWlhS4+O2eBJhMBAxAd7Il3wFq4gE4gehtwzk7xHRtuynb66fmn0YsGk2EqQNMGbqNnjra38Dh4a8Kq8/k8KvcD6UFUe1RBP7cbAjHLiwjcFnWIJJr
+HNLQScjRgvdpOs="
