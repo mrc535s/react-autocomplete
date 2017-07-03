@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import AutoCompleteList from '../src/components/AutoComplete/AutocompleteList.js';
+import AutoCompleteList from '../src/components/AutoComplete/AutoCompleteList.js';
 
 describe('Auto Complete List', () => {
 	let component;

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import AutoComplete from '../src/components/AutoComplete/Autocomplete.js';
+import AutoComplete from '../src/components/AutoComplete/AutoComplete.js';
 
 describe('Auto Complete', () => {
 	let component;
