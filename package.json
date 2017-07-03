@@ -1,6 +1,6 @@
 {
   "name": "nitro-react-autocomplete",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nitro React Autocomplete Search",
   "main": "dist/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mrc535s/react-autocomplete#readme",
   "dependencies": {
+    "nitro-react-autocomplete": "^0.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -40,7 +41,9 @@
     "webpack-dev-server": "^2.5.0"
   },
   "jest": {
-    "coverageReporters": ["lcov"],
+    "coverageReporters": [
+      "lcov"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 90,
@@ -50,7 +53,7 @@
       }
     }
   },
-  "engines":{
+  "engines": {
     "node": ">=6.9"
   },
   "engineStrict": true
