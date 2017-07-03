@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "6"
-before_deploy: "yarn"
+skip_cleanup: true
 deploy: 
   provider: npm
   email: carney535@yahoo.com
