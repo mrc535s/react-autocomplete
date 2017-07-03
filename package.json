@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/mrc535s/react-autocomplete#readme",
   "dependencies": {
-    "nitro-react-autocomplete": "^0.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
