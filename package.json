@@ -1,12 +1,13 @@
 {
-  "name": "react-autocomplete",
+  "name": "nitro-react-autocomplete",
   "version": "0.0.1",
-  "description": "react autocomplete search",
-  "main": "index.js",
+  "description": "Nitro React Autocomplete Search",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --coverage",
     "start": "webpack-dev-server",
-    "watch": "jest --coverage --watch"
+    "watch": "jest --coverage --watch",
+    "build": "webpack"
   },
   "repository": "git+https://github.com/mrc535s/react-autocomplete.git",
   "keywords": [

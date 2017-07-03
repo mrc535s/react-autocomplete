@@ -39,6 +39,11 @@ describe('Auto Complete', () => {
 		expect(wrapper.find('AutoCompleteInput').length).toEqual(1);
   });
 
+	it('Should render the Auto Complete Component with no items', () => {
+		wrapper = shallow(<AutoComplete/>);
+    expect(wrapper.state('items').length).toEqual(0);
+  });
+
 	it('Should filter the data when text is added to the state', () => {
 		component.handleTextChange('m');
 		expect(wrapper.state('filteredItems').length).toEqual(1);

@@ -11,12 +11,13 @@ const ENTER = 13;
 export default class AutoComplete extends React.Component {
 	constructor(props) {
 		super(props);
+		const items = this.props.items ? this.props.items : [];
 		this.handleTextChange = this.handleTextChange.bind(this);
 		this.handleItemSelect = this.handleItemSelect.bind(this);
 		this.handleItemMouseHover = this.handleItemMouseHover.bind(this);
 		this.onKeyDown = this.onKeyDown.bind(this);
 		this.filterItems = this.filterItems.bind(this);
-		this.state = {items: this.props.items, text: '', selectedItem: '', hoveredItem: {}, filteredItems: {}}
+		this.state = {items: items, text: '', selectedItem: '', hoveredItem: {}, filteredItems: {}}
 	}
 	filterItems(items, filter) {
 		if (filter && !this.state.selectedItem) {
