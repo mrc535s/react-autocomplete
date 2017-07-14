@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "start": "webpack-dev-server",
     "watch": "jest --coverage --watch",
-    "build": "webpack",
+    "build": "webpack --config=webpack.config.build.js",
     "prepublish": "yarn run build"
   },
   "repository": "git+https://github.com/mrc535s/react-autocomplete.git",
