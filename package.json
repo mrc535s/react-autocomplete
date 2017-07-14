@@ -1,6 +1,6 @@
 {
   "name": "nitro-react-autocomplete",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Nitro React Autocomplete Search",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "webpack-dev-server",
     "watch": "jest --coverage --watch",
     "build": "webpack --config=webpack.config.build.js",
-    "postinstall": "yarn run build"
+    "prepack": "yarn run build"
   },
   "repository": "git+https://github.com/mrc535s/react-autocomplete.git",
   "keywords": [
