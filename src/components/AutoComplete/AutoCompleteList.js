@@ -8,8 +8,10 @@ export default class AutoCompleteList extends React.Component {
 
 	render() {
 		const styles = {
-  		border: 'solid 1.5px grey',
-  		width: '150px',
+  		borderRight: 'solid 1px grey',
+			borderLeft: 'solid 1px grey',
+			borderBottom: 'solid 1px grey',
+  		width: '155px',
 			padding: "1px",
 			margin: 0,
 			height: 'auto',
